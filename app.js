@@ -19,14 +19,8 @@ function gerarNumeroAleatorio(){
     
     if (quantidadeDeElementosLista == numeroMaximo){
         listaNumerosSorteado = [];
-    }
-    
-    //poderia usar a funcao reiniciarJogo() dessa maneira tambem.
-    
-    //if(listaNumerosSorteado.length == numeroMaximo){
-        //return reiniciarPagina();
-    //}
-    
+    }    
+  
     if(listaNumerosSorteado.includes(numeroGerado)){
         return gerarNumeroAleatorio();
     }else{
@@ -40,7 +34,7 @@ function gerarNumeroAleatorio(){
 function exibirTextoNaTela(tag, texto){
     let campo = document.querySelector(tag);
     campo.innerHTML = texto;
-    //O modo da aula nao deu certo entao usei a alternativa que a propia alura deu
+    
     if ('speechSynthesis' in window) {
         let utterance = new SpeechSynthesisUtterance(texto);
         utterance.lang = 'pt-BR'; 
@@ -99,7 +93,3 @@ function reiniciarJogo(){
     tentativas = 1;
     exibirMensagemInicial();
 }
-
-//function reiniciarPagina(){
-    //location.reload();
-//}
