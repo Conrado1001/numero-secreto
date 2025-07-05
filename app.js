@@ -1,5 +1,5 @@
 let listaNumerosSorteado = [];
-let numeroMaximo = 100;
+let numeroMaximo = 1000;
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
 let meuImput = document.querySelector('input');
